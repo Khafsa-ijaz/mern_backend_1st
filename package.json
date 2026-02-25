@@ -1,0 +1,22 @@
+{
+  "name": "ecom",
+  "version": "1.0.0",
+  "description": "new project to practice the concepts",
+  "license": "ISC",
+  "author": "khafsa ijaz",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "cookie": "^1.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.2",
+    "parser": "^0.1.4"
+  }
+}
