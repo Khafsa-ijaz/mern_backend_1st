@@ -2,6 +2,7 @@ import {User} from "../models/user.model.js"
 export const registerUser=async(req,res)=>{
     try{
  const {name, email,password}=req.body;
+ console.log(req.body);
 const userexsist=await User.findOne({email})
 if(userexsist){
     return res.send("User Already found")
