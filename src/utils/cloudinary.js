@@ -16,10 +16,19 @@ try {
         resource_type:"auto",
     })
     console.log("File uploaded")
-    fs.unlinkSync(fullPath);
+    if(fullPath)
+    {
+  fs.unlinkSync(fullPath);
+    }
+  
     return response;
 } catch (error) {
-    fs.unlinkSync(localFile);
+    const fullPath = path.resolve(localFile).replace(/\\/g, "/");
+  if(fullPath)
+  {
+fs.unlinkSync(fullPath);
+  }
+    
     console.log("Cloudinary ERROR:", error);
     return null;
 }
